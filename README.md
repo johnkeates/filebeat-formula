@@ -1,2 +1,0 @@
-# filebeat-formula
-Elastico FileBeat

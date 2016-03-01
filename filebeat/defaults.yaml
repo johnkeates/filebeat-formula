@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+filebeat:
+  pkg: filebeat
+  config: '/etc/filebeat.conf'
+  service:
+    name: filebeat
