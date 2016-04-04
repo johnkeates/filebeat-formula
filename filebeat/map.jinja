@@ -11,12 +11,8 @@ that differ from whats in defaults.yaml
 {% set os_family_map = salt['grains.filter_by']({
         'Debian': {},
         'Suse': {},
-        'Arch': {
-            "pkg" : 'filebeat-arch',
-        },
-        'RedHat': {
-            "config": '/etc/filebeat.conf',
-        },
+        'Arch': {},
+        'RedHat': {},
   }
   , grain="os_family"
   , merge=salt['pillar.get']('filebeat:lookup'))

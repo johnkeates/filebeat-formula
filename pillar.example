@@ -1,3 +1,20 @@
 filebeat:
   lookup:
     master: filebeat-master
+    pkg: filebeat
+  filebeat:
+    config:
+      filebeat:
+        output:
+          elasticsearch:
+            hosts:
+              - "localhost:9200"
+        prospectors:
+          -
+            input_type: log
+            paths:
+              - /var/log/daemon.log
+          -
+            input_type: log
+            paths:
+              - /var/log/auth.log
